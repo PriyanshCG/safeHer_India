@@ -9,6 +9,8 @@
 ## 🌟 Live Demo
 🔗 [Coming Soon — Deploying on Vercel]
 
+## 🌟 FIGMA link
+🔗 [https://www.figma.com/design/GLHpttqi7FTGCXr6KpmHkg/safeHer_India?node-id=3100-2&p=f&t=BrYoGEY0h8PfhrR6-0]
 ---
 
 ## 📌 Problem Statement
