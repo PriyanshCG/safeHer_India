@@ -1,111 +1,159 @@
-:root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+@import "tailwindcss";
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  /* SafeHer India Premium Design System */
+  --color-primary: #8a2b57;
+  --color-primary-container: #a84370;
+  --color-secondary: #844886;
+  --color-background: #fff8f8;
+  --color-surface: #fff8f8;
+  --color-surface-dim: #e7d6da;
+  --color-on-surface: #22191c;
+  --color-on-surface-variant: #544248;
+  --color-outline: #877278;
+  --color-outline-variant: #d9c0c7;
+  --color-surface-container-high: #f6e4e8;
+  --color-surface-container-highest: #f0dee2;
+  --color-surface-container-low: #fff0f3;
+  --color-surface-container-lowest: #ffffff;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
+  --font-headline: 'Newsreader', serif;
+  --font-body: 'Noto Serif', serif;
+  --font-label: 'Manrope', sans-serif;
+  --font-serif: 'Noto Serif', serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body antialiased selection:bg-primary/20;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+@layer components {
+
+  /* Define base custom classes */
+  .btn-3d {
+    box-shadow: 0 3px 0 #6b1a40;
+    transition: all 100ms;
   }
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
+  .btn-3d:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #6b1a40;
   }
-}
 
-body {
-  margin: 0;
-}
-
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+  .glass-card {
+    background: rgba(255, 248, 248, 0.8);
+    backdrop-filter: blur(12px);
+    @apply border border-outline-variant/15;
   }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+  .bg-texture {
+    background-color: #faf5fa;
+    background-image: radial-gradient(#8a2b57 0.5px, transparent 0.5px), radial-gradient(#8a2b57 0.5px, #faf5fa 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.05;
+    @apply absolute inset-0 pointer-events-none;
   }
-}
-p {
-  margin: 0;
-}
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
+  .shadow-signature {
+    box-shadow: 3px 3px 2px rgba(168, 67, 112, 0.15);
+  }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .material-symbols-fill {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, #fff8f8 0%, #fff0f3 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gradient-hero::after {
+    content: '';
+    @apply absolute top-0 right-0 w-1/2 h-full pointer-events-none;
+    background: radial-gradient(circle at center right, rgba(168, 67, 112, 0.15) 0%, transparent 70%);
+  }
+
+  /* Utility aliases - Using standard property definitions to avoid @apply conflicts in v4 */
+  .btn-primary {
+    @apply bg-primary text-white font-label font-bold px-6 py-3 rounded-lg;
+    box-shadow: 0 3px 0 #6b1a40;
+    transition: all 100ms;
+  }
+
+  .btn-primary:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #6b1a40;
+  }
+
+  .form-input {
+    @apply w-full h-[46px] bg-surface-container-high border-none rounded-t-lg rounded-b-none text-on-surface px-4 font-body transition-all;
+  }
+
+  .form-input:focus {
+    @apply bg-surface-container-highest ring-0;
+    box-shadow: 0 2px 0 0 #8a2b57;
+    outline: none;
+  }
+
+  /* Animations */
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-in {
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+  }
+
+  .slide-in-from-right {
+    animation-name: slideInFromRight;
+  }
+
+  .slide-in-from-left {
+    animation-name: slideInFromLeft;
+  }
+
+  .fade-in {
+    animation-name: fadeIn;
+  }
 }
