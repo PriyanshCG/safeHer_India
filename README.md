@@ -1,231 +1,162 @@
 # 🛡️ SafeHer India
 
-### *"Your Safety. Our Priority."*
+<div align="center">
 
-> A women-first safety platform for solo female travelers across India — featuring real-time safety maps, SOS emergency alerts, and a verified guardian network.
+![SafeHer India Banner](https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80&w=1200)
 
----
+### **"Empowering Every Journey. Your Safety, Our Priority."**
 
-## 🌟 Live Demo
-🔗 [Coming Soon — Deploying on Vercel]
+*A women-first safety ecosystem designed for solo female travelers in India. Featuring real-time safety mapping, SOS emergency signals, and a trusted circle of protection.*
 
-## 🌟 FIGMA link
-🔗 [https://www.figma.com/design/GLHpttqi7FTGCXr6KpmHkg/safeHer_India?node-id=3100-2&p=f&t=BrYoGEY0h8PfhrR6-0]
----
+[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/GLHpttqi7FTGCXr6KpmHkg/safeHer_India?node-id=3100-2&p=f&t=BrYoGEY0h8PfhrR6-0)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-## 📌 Problem Statement
-
-Solo women travelers in India face:
-- 😨 Safety concerns in unfamiliar cities
-- 🚨 Fear of harassment and unsafe routes
-- 📵 Lack of immediate trusted help nearby
-- 🏥 Difficulty finding police stations or hospitals quickly
-
-**Itch Score: 76 | Whitespace Score: 9 | Source: Razorpay Fix My Itch**
+</div>
 
 ---
 
-## 💡 Solution — SafeHer India
+## 📖 Overview
 
-SafeHer India is a **women-first safety web platform** that empowers solo female travelers with:
+SafeHer India is more than just an app; it's a digital guardian. Built to address the unique safety challenges faced by women in urban and rural India, it provides a comprehensive suite of tools ranging from immediate emergency response to proactive wellness and safety education.
 
-- 🗺️ **Live Safety Map** — Real-time nearby police stations, hospitals & safe zones
-- 🆘 **SOS Emergency System** — One-tap alert with live location sharing
-- 👥 **Guardian Network** — Add trusted contacts who get instant alerts
-- 📍 **Live Location Share** — Share Google Maps link instantly
-- 🔒 **Premium Safety Features** — AI alerts, fake call, priority response
-
----
-
-## ✨ Features
-
-### 🟢 Free Features (Working)
-| Feature | Description |
-|---|---|
-| 🗺️ Live Safety Map | Shows nearby police, hospitals, safe zones using OpenStreetMap |
-| 📍 User Location | Browser geolocation to detect current position |
-| 🆘 SOS Button | Displays emergency numbers 112, 1091, 100, 108 |
-| 🔗 Share Location | Generates Google Maps link to share with anyone |
-| 👤 Guardian Contacts | Add up to 1 emergency contact (free plan) |
-| 🔐 Auth System | Basic login and signup with JWT |
-
-### 🔒 Premium Features (UI Only)
-| Feature | Description |
-|---|---|
-| 🤖 AI Safety Alerts | Smart route danger predictions |
-| 📞 Fake Call | Simulate incoming call to escape unsafe situations |
-| 🚨 Priority Response | Direct line to emergency services |
-| 👥 Unlimited Guardians | Add multiple trusted contacts |
+### 🆘 Why SafeHer?
+- **Unsafe Environments**: Real-time identification of safe zones.
+- **Panic Situations**: Instant SOS alerts to guardians and authorities.
+- **Solo Travel**: Verified routes and community-vetted safety data.
+- **Wellness**: Expert-curated guides on self-defense and mental health.
 
 ---
 
-## 🎨 Design System
+## ✨ Key Features
 
-| Token | Value |
-|---|---|
-| Primary (Sage Green) | `#8d9d4f` |
-| Accent (Warm Gold) | `#a18f5c` |
-| Background (Parchment) | `#e4d7b0` |
-| Destructive (SOS Red) | `#d98b7e` |
-| Font | Merriweather + Source Serif 4 |
-| Theme | Light + Dark Mode |
-| Style | Warm earthy Indian wellness aesthetic |
+### 🗺️ Live Safety Map (Safe Havens)
+- **Interactive Mapping**: Powered by Leaflet and OpenStreetMap.
+- **Safe Zone Discovery**: Real-time locations of Police Stations, Hospitals, and "Safe Havens" (cafes/shops with high safety ratings).
+- **Spatial Awareness**: Displays your current coordinates and surroundings instantly.
+
+### 🚨 SOS Emergency System
+- **One-Tap Panic**: Triggers a global alert to all your guardians.
+- **Instant SMS/Notification**: Shares your precise live location via Google Maps links.
+- **Emergency Directory**: Quick-access cards for 112, 1091 (Women Helpline), and local emergency services.
+
+### 👥 Guardian Network
+- **Trusted Circle**: Add and manage verified contacts who monitor your safety.
+- **Status Updates**: Automated notifications when you enter or leave designated safe zones.
+- **Priority Response**: Seamless backend orchestration ensuring zero latency during alerts.
+
+### 🌿 Wellness Hub & Safety News
+- **Expert Guides**: Curated articles on self-defense, travel protocols, and mental health.
+- **Real-time Alerts**: Safety news feed regarding legislation and local security updates.
+- **Saved Resources**: Bookmark guides for offline reference during travel.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+### Frontend Architecture
+- **Framework**: [React 19](https://reactjs.org/) (Vite for lighting fast builds)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) with a custom **"Indian Wellness Aesthetic"**
+- **Maps**: [Leaflet](https://leafletjs.org/) & [React-Leaflet](https://react-leaflet.js.org/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **State & Routing**: React Context API & [React Router 7](https://reactrouter.com/)
 
-### Backend
-![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-
-### APIs & Tools
-| Tool | Purpose |
-|---|---|
-| Leaflet.js | Interactive maps |
-| OpenStreetMap Overpass API | Fetch real police/hospital data (FREE) |
-| React Router v6 | Client-side routing |
-| Redux Toolkit | State management |
-| Formik + Yup | Form validation |
-| Axios | API calls |
-| React Hot Toast | Notifications |
-| JWT | Authentication |
+### Backend Infrastructure
+- **Runtime**: [Node.js](https://nodejs.org/)
+- **API Framework**: [Express.js](https://expressjs.com/)
+- **Database**: [MongoDB](https://www.mongodb.com/) via [Mongoose](https://mongoosejs.com/)
+- **Security**: JWT (JSON Web Tokens), Bcrypt.js, and CORS protection.
 
 ---
 
-## 📁 Folder Structure
+## 📁 Project Structure
 
-```
-SafeHer-India/
-├── frontend/
-│   ├── public/
+```bash
+safeHer_India/
+├── backend/                # Express API & Server
 │   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── features/
-│   │   ├── hooks/
-│   │   ├── services/
-│   │   └── utils/
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-│
-├── backend/
-│   ├── controllers/
-│   ├── routes/
-│   ├── models/
-│   ├── middleware/
-│   ├── config/
-│   └── server.js
-│
+│   │   ├── config/         # DB Connection
+│   │   ├── controllers/    # Business Logic (Auth, SOS, Location)
+│   │   ├── middleware/     # Security & Logging
+│   │   ├── models/         # MongoDB Schemas (User, Guardian, SOS)
+│   │   ├── routes/         # API Endpoints
+│   │   └── services/       # External API Integrations (Overpass)
+│   └── server.js           # Server Entry Point
+├── frontend/               # React Application
+│   ├── src/
+│   │   ├── assets/         # Brand Illustrations & PNGs
+│   │   ├── components/     # Atomic UI Components
+│   │   ├── hooks/          # Custom Hooks (useAuth, useLocation)
+│   │   ├── pages/          # Full Page Views
+│   │   ├── router/         # Navigation Logic
+│   │   └── utils/          # API Config & Constants
+│   ├── public/             # Icons & Favicons
+│   ├── vite.config.js      # Build Optimization
+│   └── tailwind.config.js  # Design Tokens
 └── README.md
 ```
 
 ---
 
-## 🖥️ Pages
-
-| Page | Route | Access |
-|---|---|---|
-| Landing Page | `/` | Public |
-| Login | `/login` | Public |
-| Signup | `/signup` | Public |
-| Safety Map | `/map` | Protected |
-| SOS Emergency | `/sos` | Protected |
-| Dashboard | `/dashboard` | Protected |
-| Pricing | `/pricing` | Public |
-| Payment | `/payment` | Protected |
-
----
-
-## ⚙️ Setup & Installation
+## 🚀 Setup & Installation
 
 ### Prerequisites
-- Node.js v18+
-- npm or yarn
-- MongoDB (local or Atlas)
+- Node.js (v18 or higher)
+- MongoDB (Local or Atlas Instance)
 
-### 1️⃣ Clone the Repository
+### 1. Clone & Install
 ```bash
-git clone https://github.com/CG-Repositories/safeher-india.git
-cd safeher-india
+git clone https://github.com/PriyanshCG/safeHer_India.git
+cd safeHer_India
 ```
 
-### 2️⃣ Frontend Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### 3️⃣ Backend Setup
+### 2. Backend Configuration
 ```bash
 cd backend
 npm install
+# Create a .env file with:
+# PORT=5000
+# MONGO_URI=your_mongodb_uri
+# JWT_SECRET=your_secret_key
 npm run dev
 ```
 
-### 4️⃣ Environment Variables
-Create `.env` in backend folder:
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+### 3. Frontend Configuration
+```bash
+cd ../frontend
+npm install
+npm run dev
 ```
 
 ---
 
-## 🗓️ Development Timeline
-
-| Days | Tasks |
-|---|---|
-| Day 1-2 | Figma Design + Approval |
-| Day 3-4 | Project Setup + Routing |
-| Day 5-6 | Redux + API Integration |
-| Day 7-8 | Auth System + Forms |
-| Day 9-10 | Map Page + SOS Page |
-| Day 11-12 | Dashboard + Pricing + Payment UI |
-| Day 13-14 | Testing + Bug Fixes |
-| Day 15 | Final Polish + Deployment |
+## 🎨 Aesthetic & Design
+SafeHer India uses a curated color palette designed to evoke a sense of **peace, trust, and security**:
+- **Sage Green (`#8D9D4F`)**: For balance and organic growth.
+- **Warm Gold (`#A18F5C`)**: For premium safety and resilience.
+- **Sunset Pink (`#C94A7D`)**: For feminine energy and action.
+- **Parchment (`#E4D7B0`)**: For a soft, readable backdrop.
 
 ---
 
-## 👨‍💻 Developer
-
-**Built with ❤️ for Women of India**
-
-| | |
-|---|---|
-| 👤 Developer | [Priyansh Patel] |
-| 🎓 College | [Coding Gita X Swaminarayn University] |
-| 📧 Email | [priyansh30407@gmail.com] |
-| 🔗 GitHub | [@PriyanshCG] |
+## 🗓️ Roadmap
+- [x] Multi-step Secure Onboarding
+- [x] Live Location Streaming
+- [x] SOS Alert Orchestration
+- [ ] AI-Driven Danger Route Predictions (In Progress)
+- [ ] Fake Call Voice Simulation (UI Ready)
+- [ ] Community Safety Forums
 
 ---
 
-## 📊 Problem Validation
+## 👨‍💻 Developer Information
 
-> Source: **Razorpay Fix My Itch** — India's largest startup problem database
+**Built with ❤️ by Priyansh Patel**
+*Coding Gita X Swaminarayn University*
 
-| Metric | Score |
-|---|---|
-| 🔴 Severity Score | 6/10 |
-| 💰 TAM Score | 60 |
-| 🏳️ Whitespace Score | 9/10 |
-| 🔁 Frequency Score | 7/10 |
-| 🔥 Itch Score | 76/100 |
-
----
-
-## 📄 License
-
-This project is built for educational and hackathon purposes.
+- **GitHub**: [@PriyanshCG](https://github.com/PriyanshCG)
+- **Email**: priyansh30407@gmail.com
 
 ---
 
@@ -234,6 +165,6 @@ This project is built for educational and hackathon purposes.
 ### 🛡️ SafeHer India
 **"Your Safety. Our Priority."**
 
-*Made with ❤️ for Women of India*
+*Made for the women of India, by someone who cares.*
 
 </div>
