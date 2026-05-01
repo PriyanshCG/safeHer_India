@@ -1,16 +1,54 @@
-# React + Vite
+# 🖥️ SafeHer India - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The React-based frontend for the SafeHer India safety platform. Built with a focus on high performance, responsiveness, and a warm wellness-oriented user experience.
 
-Currently, two official plugins are available:
+## 🚀 Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Prerequisites
+- Node.js (v18+)
+- npm or yarn
 
-## React Compiler
+### Installation
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Development
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+### Build for Production
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technology Stack
+
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite 8](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Navigation**: [React Router 7](https://reactrouter.com/)
+- **Maps**: [Leaflet](https://leafletjs.org/) & [React Leaflet](https://react-leaflet.js.org/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Data Fetching**: [Axios](https://axios-http.com/)
+
+---
+
+## 📁 Key Directories
+
+- `src/assets`: Brand images, backgrounds, and hero illustrations.
+- `src/components`: UI components organized by feature (Landing, Dashboard, SOS, Map).
+- `src/hooks`: Custom hooks for Auth logic and Geolocation streaming.
+- `src/pages`: Full-screen views (Map, SOS, Wellness, Pricing).
+- `src/router`: Route definitions and protected route wrappers.
+- `src/utils`: Centralized API configuration and constants.
+
+---
+
+## ✨ Design Principles
+- **Clarity**: High-contrast SOS buttons and navigation.
+- **Calmness**: Earthy color palette to reduce user anxiety during emergencies.
+- **Responsiveness**: Optimized for mobile-first usage in real-world scenarios.
