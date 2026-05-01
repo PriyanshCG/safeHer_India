@@ -21,7 +21,7 @@ services:
         sync: false
 
   # Frontend Application (React/Vite)
-  - type: static
+  - type: static_site
     name: safeher-india-frontend
     env: static
     buildCommand: npm install && npm run build
