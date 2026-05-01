@@ -14,20 +14,19 @@ services:
       - key: PORT
         value: 5000
       - key: MONGO_URI
-        sync: false # User must set this in Render Dashboard
+        sync: false
       - key: JWT_SECRET
-        sync: false # User must set this in Render Dashboard
+        sync: false
       - key: FRONTEND_URL
-        sync: false # User must set this in Render Dashboard (e.g., https://safeher-india.onrender.com)
+        sync: false
 
   # Frontend Application (React/Vite)
-  - type: web
+  - type: static
     name: safeher-india-frontend
     env: static
-    plan: free
     buildCommand: npm install && npm run build
-    staticPublishPath: dist
+    publishPath: dist
     rootDir: frontend
     envVars:
       - key: VITE_API_URL
-        sync: false # User must set this in Render Dashboard (e.g., https://safeher-india-backend.onrender.com/api)
+        sync: false
