@@ -1,0 +1,34 @@
+services:
+  # Backend API (Node.js/Express)
+  - type: web
+    name: safeher-india-backend
+    env: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm start
+    rootDir: backend
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        sync: false # User must set this in Render Dashboard
+      - key: JWT_SECRET
+        sync: false # User must set this in Render Dashboard
+      - key: FRONTEND_URL
+        sync: false # User must set this in Render Dashboard (e.g., https://safeher-india.onrender.com)
+
+  # Frontend Application (React/Vite)
+  - type: web
+    name: safeher-india-frontend
+    env: static
+    plan: free
+    region: singapore
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    rootDir: frontend
+    envVars:
+      - key: VITE_API_URL
+        sync: false # User must set this in Render Dashboard (e.g., https://safeher-india-backend.onrender.com/api)
