@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Filter, Clock, ArrowRight, Bookmark, Share2, CheckCircle, Heart, Sparkles, Shield, Compass, Dumbbell, Brain } from 'lucide-react';
-
 export default function WellnessPage() {
     const [activeCategory, setActiveCategory] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
@@ -8,7 +7,6 @@ export default function WellnessPage() {
     const [isExpanded, setIsExpanded] = useState(false);
     const [toast, setToast] = useState(null);
     const [hoveredCard, setHoveredCard] = useState(null);
-
     const CATEGORIES = [
         { name: 'All', icon: Sparkles },
         { name: 'Mental Health', icon: Brain },
@@ -16,7 +14,6 @@ export default function WellnessPage() {
         { name: 'Travel Tips', icon: Compass },
         { name: 'Self Defense', icon: Dumbbell }
     ];
-
     const GUIDES = [
         {
             id: 1,
@@ -73,14 +70,12 @@ export default function WellnessPage() {
             accent: '#1ABC9C'
         }
     ];
-
     const filteredGuides = GUIDES.filter(g => {
         const matchesCategory = activeCategory === 'All' || g.category === activeCategory;
-        const matchesSearch = g.title.toLowerCase().includes(searchQuery.toLowerCase()) 
+        const matchesSearch = g.title.toLowerCase().includes(searchQuery.toLowerCase())
             || g.desc.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesSearch;
     });
-
     const toggleBookmark = (id) => {
         if (savedGuides.includes(id)) {
             setSavedGuides(savedGuides.filter(savedId => savedId !== id));
@@ -88,7 +83,6 @@ export default function WellnessPage() {
             setSavedGuides([...savedGuides, id]);
         }
     };
-
     const handleShare = async (guide) => {
         if (navigator.share) {
             try {
@@ -106,10 +100,8 @@ export default function WellnessPage() {
             setTimeout(() => setToast(null), 2000);
         }
     };
-
     return (
         <div className="min-h-screen relative" style={{ background: 'linear-gradient(180deg, #FFF8F0 0%, #FFF0F5 50%, #F5F0FF 100%)' }}>
-            
             {/* Toast Notification */}
             {toast && (
                 <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-gray-900 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-4">
@@ -117,14 +109,11 @@ export default function WellnessPage() {
                     <span className="font-label text-sm font-semibold">{toast}</span>
                 </div>
             )}
-
             {/* Decorative blobs */}
             <div className="absolute top-20 left-10 w-72 h-72 rounded-full opacity-20 blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, #F0A5C0, transparent)' }} />
             <div className="absolute top-96 right-10 w-96 h-96 rounded-full opacity-15 blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, #A78BFA, transparent)' }} />
             <div className="absolute bottom-40 left-1/4 w-80 h-80 rounded-full opacity-10 blur-3xl pointer-events-none" style={{ background: 'radial-gradient(circle, #FBBF24, transparent)' }} />
-
             <div className="max-w-7xl mx-auto px-8 py-12 relative z-10">
-
                 {/* Hero Header */}
                 <header className="mb-16 text-center max-w-3xl mx-auto">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6" style={{ background: 'linear-gradient(135deg, #FDF2F8, #EDE9FE)', border: '1px solid rgba(139,74,106,0.15)' }}>
@@ -143,7 +132,6 @@ export default function WellnessPage() {
                     <p className="text-lg text-[#6B5B6B] font-body max-w-xl mx-auto leading-relaxed">
                         Expert-vetted resources for your physical safety and mental well-being. Curated with care for women across India.
                     </p>
-                    
                     {/* Search */}
                     <div className="relative w-full max-w-md mx-auto mt-8">
                         <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -157,12 +145,11 @@ export default function WellnessPage() {
                         />
                     </div>
                 </header>
-
                 {/* Featured Article — Immersive Hero Card */}
                 <div className="mb-16 relative rounded-[2rem] overflow-hidden group cursor-pointer" style={{ minHeight: '420px', boxShadow: '0 25px 60px rgba(45,27,46,0.2)' }}>
-                    <img 
-                        src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80&w=1200" 
-                        alt="Featured Guide" 
+                    <img
+                        src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&q=80&w=1200"
+                        alt="Featured Guide"
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.5s]"
                     />
                     <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(45,27,46,0.92) 0%, rgba(45,27,46,0.7) 40%, rgba(45,27,46,0.3) 100%)' }} />
@@ -176,7 +163,6 @@ export default function WellnessPage() {
                         <p className="text-gray-300 font-body text-lg leading-relaxed max-w-xl mb-8">
                             From cab protocols to transit apps, we break down every layer of safety needed for your daily journey.
                         </p>
-                        
                         {/* Expandable Content */}
                         <div className={`overflow-hidden transition-all duration-700 ease-in-out ${isExpanded ? 'max-h-[500px] opacity-100 mb-6' : 'max-h-0 opacity-0'}`}>
                             <div className="p-6 rounded-2xl" style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(10px)' }}>
@@ -191,8 +177,7 @@ export default function WellnessPage() {
                                 </p>
                             </div>
                         </div>
-
-                        <button 
+                        <button
                             onClick={() => setIsExpanded(!isExpanded)}
                             className="inline-flex items-center gap-3 px-8 py-3.5 rounded-xl font-bold text-sm uppercase tracking-widest w-fit transition-all duration-300 group/btn"
                             style={{ background: 'linear-gradient(135deg, #C94A7D, #A855F7)', color: 'white', boxShadow: '0 8px 32px rgba(201,74,125,0.35)' }}
@@ -202,7 +187,6 @@ export default function WellnessPage() {
                         </button>
                     </div>
                 </div>
-
                 {/* Category Pills — Floating style */}
                 <div className="flex flex-wrap justify-center gap-3 mb-12">
                     {CATEGORIES.map(cat => {
@@ -211,11 +195,10 @@ export default function WellnessPage() {
                             <button
                                 key={cat.name}
                                 onClick={() => setActiveCategory(cat.name)}
-                                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
-                                    activeCategory === cat.name
+                                className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${activeCategory === cat.name
                                         ? 'text-white shadow-lg scale-105'
                                         : 'bg-white/70 backdrop-blur-sm border border-gray-200/60 text-[#6B5B6B] hover:border-[#C94A7D]/40 hover:bg-white'
-                                }`}
+                                    }`}
                                 style={activeCategory === cat.name ? { background: 'linear-gradient(135deg, #8B4A6A, #C94A7D)', boxShadow: '0 8px 24px rgba(201,74,125,0.3)' } : {}}
                             >
                                 <Icon className="w-4 h-4" />
@@ -223,15 +206,11 @@ export default function WellnessPage() {
                                 <span className={`text-xs ${activeCategory === cat.name ? 'text-white/70' : 'text-gray-400'}`}>
                                     ({cat.name === 'All' ? GUIDES.length : GUIDES.filter(g => g.category === cat.name).length})
                                 </span>
-                            </button>
-                        );
-                    })}
-                </div>
-
+                            </button>);
+                    })}               </div>
                 <p className="text-center text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-10">
                     {filteredGuides.length} guide{filteredGuides.length !== 1 && 's'} available
                 </p>
-
                 {/* Guides Grid — Staggered Bento Style */}
                 {filteredGuides.length === 0 ? (
                     <div className="flex flex-col items-center justify-center py-20 text-center bg-white/60 backdrop-blur-xl rounded-3xl border-2 border-dashed border-gray-200">
@@ -246,18 +225,16 @@ export default function WellnessPage() {
                         {filteredGuides.map((guide, index) => (
                             <div
                                 key={guide.id}
-                                className={`group relative bg-white/70 backdrop-blur-xl rounded-[1.5rem] overflow-hidden transition-all duration-500 hover:-translate-y-2 ${
-                                    index === 0 ? 'md:col-span-2 md:row-span-1' : ''
-                                }`}
-                                style={{ 
-                                    boxShadow: hoveredCard === guide.id 
-                                        ? `0 20px 50px ${guide.accent}25, 0 0 0 1px ${guide.accent}20` 
+                                className={`group relative bg-white/70 backdrop-blur-xl rounded-[1.5rem] overflow-hidden transition-all duration-500 hover:-translate-y-2 ${index === 0 ? 'md:col-span-2 md:row-span-1' : ''
+                                    }`}
+                                style={{
+                                    boxShadow: hoveredCard === guide.id
+                                        ? `0 20px 50px ${guide.accent}25, 0 0 0 1px ${guide.accent}20`
                                         : '0 4px 20px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.04)',
                                     border: '1px solid rgba(255,255,255,0.6)'
                                 }}
                                 onMouseEnter={() => setHoveredCard(guide.id)}
-                                onMouseLeave={() => setHoveredCard(null)}
-                            >
+                                onMouseLeave={() => setHoveredCard(null)}  >
                                 <div className={`relative overflow-hidden ${index === 0 ? 'h-56 md:h-64' : 'h-48'}`}>
                                     <img
                                         src={guide.image}
@@ -265,9 +242,9 @@ export default function WellnessPage() {
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                                    
+
                                     {/* Category chip */}
-                                    <span 
+                                    <span
                                         className="absolute top-4 left-4 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest text-white shadow-lg backdrop-blur-md"
                                         style={{ background: `${guide.accent}CC` }}
                                     >
@@ -279,7 +256,6 @@ export default function WellnessPage() {
                                         <Clock className="w-3 h-3" /> {guide.time}
                                     </span>
                                 </div>
-                                
                                 <div className="p-6 space-y-3">
                                     <h3 className={`font-bold font-serif text-[#2D1B2E] group-hover:text-[#8B4A6A] transition-colors leading-tight ${index === 0 ? 'text-2xl' : 'text-lg'}`}>
                                         {guide.title}
@@ -287,19 +263,18 @@ export default function WellnessPage() {
                                     <p className="text-sm text-[#6B5B6B] line-clamp-2 font-body leading-relaxed">
                                         {guide.desc}
                                     </p>
-                                    
                                     <div className="flex items-center justify-between pt-4">
                                         <button className="flex items-center gap-2 text-[#8B4A6A] font-bold text-xs uppercase tracking-widest hover:gap-3 transition-all">
                                             Read More <ArrowRight className="w-3.5 h-3.5" />
                                         </button>
                                         <div className="flex items-center gap-1">
-                                            <button 
+                                            <button
                                                 onClick={() => toggleBookmark(guide.id)}
                                                 className={`p-2 rounded-xl transition-all ${savedGuides.includes(guide.id) ? 'bg-[#FDF0F6] text-[#C94A7D] scale-110' : 'text-gray-400 hover:text-[#C94A7D] hover:bg-gray-50'}`}
                                             >
                                                 <Bookmark className="w-4 h-4" fill={savedGuides.includes(guide.id) ? '#C94A7D' : 'none'} />
                                             </button>
-                                            <button 
+                                            <button
                                                 onClick={() => handleShare(guide)}
                                                 className="p-2 text-gray-400 hover:text-[#8B4A6A] hover:bg-gray-50 rounded-xl transition-all"
                                             >
@@ -312,7 +287,6 @@ export default function WellnessPage() {
                         ))}
                     </div>
                 )}
-
                 {/* Bottom CTA */}
                 <div className="mt-20 text-center">
                     <div className="inline-flex flex-col items-center gap-4 p-10 rounded-[2rem]" style={{ background: 'linear-gradient(135deg, rgba(139,74,106,0.06), rgba(168,85,247,0.06))', border: '1px solid rgba(139,74,106,0.1)' }}>
