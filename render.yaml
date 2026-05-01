@@ -25,7 +25,6 @@ services:
     name: safeher-india-frontend
     env: static
     plan: free
-    region: singapore
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     rootDir: frontend
