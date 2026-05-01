@@ -19,14 +19,3 @@ services:
         sync: false
       - key: FRONTEND_URL
         sync: false
-
-  # Frontend Application (React/Vite)
-  - type: static
-    name: safeher-india-frontend
-    env: static
-    buildCommand: npm install && npm run build
-    publishPath: dist
-    rootDir: frontend
-    envVars:
-      - key: VITE_API_URL
-        sync: false
