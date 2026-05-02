@@ -14,6 +14,17 @@ const activityRoutes = require('./routes/activityRoutes');
 
 const app = express();
 
+// IMMEDIATELY DEFINE ROOT ROUTE FOR TESTING
+app.get('/', (req, res) => {
+  res.send('SafeHer India Backend API is working!');
+});
+
+// Verification Route
+app.get('/verify', (req, res) => {
+  res.json({ success: true, message: 'Antigravity verified' });
+});
+
+
 // Middleware
 app.use(express.json());
 // CORS Configuration
@@ -36,15 +47,7 @@ app.use(cors({
   credentials: true
 }));
 
-// Root Route
-app.get('/', (req, res) => {
-  res.send('SafeHer India Backend API is working!');
-});
 
-// Verification Route
-app.get('/verify', (req, res) => {
-  res.json({ success: true, message: 'Antigravity verified' });
-});
 
 
 // Routes
