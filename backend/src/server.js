@@ -63,17 +63,18 @@ app.get('/api/health', (req, res) => {
 // Error handling payload
 app.use(errorHandler);
 
-// Database Connection and Server Start
+// Start Server
 const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
+// Database Connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB connected successfully');
-    app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-    });
   })
   .catch((err) => {
     console.error('Database connection failed:', err.message);
-    process.exit(1);
-  });
+    // Don't exit process, let the server run so we can see errors in logs
+  });
