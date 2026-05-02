@@ -8,12 +8,9 @@
 
 *A women-first safety ecosystem designed for solo female travelers in India. Featuring real-time safety mapping, SOS emergency signals, and a trusted circle of protection.*
 
-[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/GLHpttqi7FTGCXr6KpmHkg/shopyzone?node-id=3100-2&t=kUyA9oLeteo1exh4-1)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-00ADFF?style=for-the-badge&logo=netlify&logoColor=white)](https://safeher-india.netlify.app)
-[![Backend API](https://img.shields.io/badge/Backend_API-4353FF?style=for-the-badge&logo=render&logoColor=white)](https://safeher-india-backend.onrender.com)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+**[Figma Design Link](https://www.figma.com/design/GLHpttqi7FTGCXr6KpmHkg/shopyzone?node-id=3100-2&t=kUyA9oLeteo1exh4-1)**  
+**[Live Frontend Link](https://safeher-india.netlify.app)**  
+**[Backend API Link](https://safeher-india-backend.onrender.com)**  
 
 </div>
 
