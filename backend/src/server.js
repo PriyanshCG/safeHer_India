@@ -16,8 +16,23 @@ const app = express();
 
 // Middleware
 app.use(express.json());
+// CORS Configuration
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  'https://safeher-india.netlify.app', // Adding explicit fallback for production
+  'http://localhost:5173'
+].filter(Boolean);
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 
