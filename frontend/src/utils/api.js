@@ -1,10 +1,14 @@
 // API configuration and utility functions
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = (import.meta.env.VITE_API_URL || 'https://safeher-india-backend.onrender.com/api').replace(/\/+$/, '');
 
 // Generic API request function
 export const apiRequest = async (endpoint, options = {}) => {
-  const url = `${API_BASE_URL}${endpoint}`;
+  // Ensure endpoint starts with a slash
+  const formattedEndpoint = endpoint.startsWith('/') ? endpoint : `/${endpoint}`;
+  const url = `${API_BASE_URL}${formattedEndpoint}`;
   
+  console.log(`[API Request] ${options.method || 'GET'} ${url}`);
+
   const config = {
     headers: {
       'Content-Type': 'application/json',
@@ -24,12 +28,16 @@ export const apiRequest = async (endpoint, options = {}) => {
     const data = await response.json();
     
     if (!response.ok) {
+      console.error(`[API Error Response]`, data);
       throw new Error(data.message || 'API request failed');
     }
     
     return data;
   } catch (error) {
-    console.error('API Error:', error);
+    console.error('[API Connection Error]:', error.message);
+    if (error.message === 'Failed to fetch') {
+      throw new Error('Could not connect to the server. Please check your internet connection or if the backend service is running.');
+    }
     throw error;
   }
 };
