@@ -11,7 +11,7 @@
 **[Figma Design Link](https://www.figma.com/design/GLHpttqi7FTGCXr6KpmHkg/safeHer_India?node-id=3100-2&t=DX4JZgdvf9MG152g-1)**  
 **[Live Frontend Link](https://safeher-india.netlify.app)**  
 **[Backend API Link](https://safeher-indiasafeher-india-backend.onrender.com)**  
-**[Postman Documentation](https://documenter.getpostman.com/view/50839334/2sBXqKnzCE)**  
+**[Postman Documentation](https://documenter.getpostman.com/view/50839212/2sBXqKoL4C)**  
 **[YouTube Demo Link](https://youtube.com/watch?v=YOUR_VIDEO_ID)**  
 
 
