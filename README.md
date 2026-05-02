@@ -10,7 +10,7 @@
 
 **[Figma Design Link](https://www.figma.com/design/GLHpttqi7FTGCXr6KpmHkg/shopyzone?node-id=3100-2&t=kUyA9oLeteo1exh4-1)**  
 **[Live Frontend Link](https://safeher-india.netlify.app)**  
-**[Backend API Link](https://safeher-india-backend.onrender.com)**  
+**[Backend API Link](https://safeher-indiasafeher-india-backend.onrender.com)**  
 
 </div>
 
