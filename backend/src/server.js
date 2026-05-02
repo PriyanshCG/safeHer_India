@@ -14,6 +14,17 @@ const activityRoutes = require('./routes/activityRoutes');
 
 const app = express();
 
+// IMMEDIATELY DEFINE ROOT ROUTE FOR TESTING
+app.get('/', (req, res) => {
+  res.send('SafeHer India Backend API is working!');
+});
+
+// Verification Route
+app.get('/verify', (req, res) => {
+  res.json({ success: true, message: 'Antigravity verified' });
+});
+
+
 // Middleware
 app.use(express.json());
 // CORS Configuration
@@ -36,16 +47,8 @@ app.use(cors({
   credentials: true
 }));
 
-// Root Route - Welcome Message & Server Status
-app.get('/', (req, res) => {
-  res.status(200).json({
-    message: "SafeHer India API",
-    status: "OK",
-    version: "1.0.0",
-    timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || 'development'
-  });
-});
+
+
 
 // Routes
 app.use('/api/auth', authRoutes);
@@ -63,17 +66,18 @@ app.get('/api/health', (req, res) => {
 // Error handling payload
 app.use(errorHandler);
 
-// Database Connection and Server Start
+// Start Server
 const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
+// Database Connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB connected successfully');
-    app.listen(PORT, () => {
-      console.log(`Server running on port ${PORT}`);
-    });
   })
   .catch((err) => {
     console.error('Database connection failed:', err.message);
-    process.exit(1);
-  });
+    // Don't exit process, let the server run so we can see errors in logs
+  });

@@ -1,5 +1,5 @@
 // API configuration and utility functions
-const API_BASE_URL = (import.meta.env.VITE_API_URL || 'https://safeher-india-backend.onrender.com/api').replace(/\/+$/, '');
+const API_BASE_URL = (import.meta.env.VITE_API_URL || 'https://safeher-indiasafeher-india-backend.onrender.com/api').replace(/\/+$/, '');
 
 // Generic API request function
 export const apiRequest = async (endpoint, options = {}) => {
