@@ -30,17 +30,9 @@ const StandardLayout = ({ children }) => (
     </div>
 );
 
-// Protected Route Component
+// Protected Route Component (TEMPORARILY DISABLED FOR FIGMA IMPORT)
 const PrivateRoute = ({ children }) => {
-    const { isAuthenticated, loading } = useAuth();
-
-    if (loading) return (
-        <div className="h-screen w-full flex items-center justify-center bg-background text-primary font-headline italic animate-pulse text-2xl">
-            Safeguarding...
-        </div>
-    );
-
-    return isAuthenticated ? children : <Navigate to="/login" replace />;
+    return children;
 };
 
 export default function AppRouter() {

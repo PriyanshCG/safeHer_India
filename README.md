@@ -11,6 +11,9 @@
 **[Figma Design Link](https://www.figma.com/design/GLHpttqi7FTGCXr6KpmHkg/shopyzone?node-id=3100-2&t=kUyA9oLeteo1exh4-1)**  
 **[Live Frontend Link](https://safeher-india.netlify.app)**  
 **[Backend API Link](https://safeher-indiasafeher-india-backend.onrender.com)**  
+**[Postman Documentation](https://documenter.getpostman.com/view/YOUR_VIEW_ID)**  
+**[YouTube Demo Link](https://youtube.com/watch?v=YOUR_VIDEO_ID)**  
+
 
 </div>
 
