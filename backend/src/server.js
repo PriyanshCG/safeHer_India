@@ -36,16 +36,16 @@ app.use(cors({
   credentials: true
 }));
 
-// Root Route - Welcome Message & Server Status
+// Root Route
 app.get('/', (req, res) => {
-  res.status(200).json({
-    message: "SafeHer India API",
-    status: "OK",
-    version: "1.0.0",
-    timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || 'development'
-  });
+  res.send('SafeHer India Backend API is working!');
 });
+
+// Verification Route
+app.get('/verify', (req, res) => {
+  res.json({ success: true, message: 'Antigravity verified' });
+});
+
 
 // Routes
 app.use('/api/auth', authRoutes);
