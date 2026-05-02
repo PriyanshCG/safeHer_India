@@ -36,6 +36,17 @@ app.use(cors({
   credentials: true
 }));
 
+// Root Route - Welcome Message & Server Status
+app.get('/', (req, res) => {
+  res.status(200).json({
+    message: "SafeHer India API",
+    status: "OK",
+    version: "1.0.0",
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);

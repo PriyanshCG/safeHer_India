@@ -8,10 +8,9 @@
 
 *A women-first safety ecosystem designed for solo female travelers in India. Featuring real-time safety mapping, SOS emergency signals, and a trusted circle of protection.*
 
-[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/GLHpttqi7FTGCXr6KpmHkg/safeHer_India?node-id=3100-2&p=f&t=BrYoGEY0h8PfhrR6-0)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+**[Figma Design Link](https://www.figma.com/design/GLHpttqi7FTGCXr6KpmHkg/shopyzone?node-id=3100-2&t=kUyA9oLeteo1exh4-1)**  
+**[Live Frontend Link](https://safeher-india.netlify.app)**  
+**[Backend API Link](https://safeher-india-backend.onrender.com)**  
 
 </div>
 
